@@ -176,6 +176,24 @@ nav a:not(.without_dot_item)::after {
 }
 .textbox_container {
     width: 49vw;
+    display: grid;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: .9vw;
+    position: relative;
+}
+.slider_block {
+    display: none;
+}
+.info_section2 .textbox_container .text_slider_buttons {
+    height: 2vw;
+    width: 2vw;
+    background-color: #fff;
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -185,7 +203,17 @@ nav a:not(.without_dot_item)::after {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: .9vw;
+/*    bottom: 109px;*/
+    bottom: 23.5%;
+}
+#prev {
+    right: 36%;
+}
+#next {
+    right: 31.8%;
+}
+.info_section2 .textbox_container .text_slider_buttons span {
+    color: #000;
 }
 .textbox_container h2 { 
     font-size: 1.8vw;

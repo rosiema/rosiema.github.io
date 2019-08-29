@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel=stylesheet type=text/css href="styles/index.css" />
         <link rel=stylesheet type=text/css href="fonts/fontAwesome/css/font-awesome.min.css" />
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/slider.js"></script>
         <title>Test</title>
     </head>
     <body>
@@ -53,18 +55,42 @@
                     </div>
                 </div>
             </article>
+
             <article class="informative_section info_section2">
                 <div class="textbox_container">
-                    <div>
-                        <h2>Скидки на tovar\usluga</h2><br /><br />
-                        <span class="sale_box">30%</span>
+                    <div class="slider_block">
+                        <h2>Скидки на tovar\usluga1</h2><br /><br />
+                        <span class="sale_box">10%</span>
                         <p class="service_info_text">Очень удобно, когда одна компания делает для вас всё в комплексе, правда? Не надо искать 
                             и совмещать разных подрядчиков, тратить время и нервы. Мы можем выполнить всё.
                         </p>
                         <a type="submit" class="informative_section_button white_button">Подробнее</a>
                     </div>
+                    <div class="slider_block">
+                        <h2>Скидки на tovar\usluga2</h2><br /><br />
+                        <span class="sale_box">20%</span>
+                        <p class="service_info_text">ОМы можем выполнить весь комплекс работ: проектные изыскания, генеральное проектирование, согласования во всех инстанциях
+                        </p>
+                        <a type="submit" class="informative_section_button white_button">Подробнее</a>
+                    </div>
+                    <div class="slider_block">
+                        <h2>Скидки на tovar\usluga3</h2><br /><br />
+                        <span class="sale_box">30%</span>
+                        <p class="service_info_text">ть и совмещать разных подрядчиков, тратить время и нервы. Мы можем выполнить весь комплекс работ: проектные изыскания, 
+                        </p>
+                        <a type="submit" class="informative_section_button white_button">Подробнее</a>
+                    </div>
+                    <div class="text_slider_buttons" id="prev" type="button" value="Prev"><span class="fa fa-caret-left" aria-hidden="true"></span></div>
+                    <div class="text_slider_buttons" id="next" type="button" value="Next"><span class="fa fa-caret-right" aria-hidden="true"></span></div>
                 </div>
             </article>
+
+
+
+
+
+
+
             <article class="informative_section info_section3">
                 <div class="textbox_container">
                     <div>
@@ -193,11 +219,11 @@
                     <a type="submit" class="service_more_button red_button">Подробнее</a>
                 </div>
             </div>
-            
+
             <div class="third_project_block">
 
             </div>
-            
+
             <div class="fourth_project_block">
 
             </div>
