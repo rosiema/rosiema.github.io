@@ -17,16 +17,25 @@
                     <a type="submit"></a>
                 </div>
             </form>
-            <nav>
+            <a href="#" class="without_dot_item active menu_logo"><img alt="webpage logo" src="images/logo.png" /></a>
+            <a href="javascript:void(0);" class="icon" id="burger" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <nav class="topnav" id="myTopnav">
                 <a href="#">О КОМПАНИИ</a>
                 <a href="#">КОМПЛЕКСНЫЕ ПОСТАВКИ</a>
-                <a href="#">ПРОЕКТИ</a>
-                <a href="#" class="without_dot_item"><img alt="webpage logo" src="images/logo.png" /></a>
+                <a href="#" class="without_dot_item">ПРОЕКТИ</a>
+                <div class="navbar_space"></div>
                 <a href="#">ПРЕИМУЩЕСТВА</a>
                 <a href="#">СОТРУДНИЧЕСТВО</a>
                 <a href="#">НОВОСТИ</a>
                 <a href="#" class="without_dot_item">КОНТАКТЫ</a>
             </nav>
+
+
+
+
+
             <form method="post">
                 <div class="phone_button_container">
                     <a type="submit"></a>
@@ -34,15 +43,24 @@
                 </div>
             </form>
         </header>
+        <div class="slideshow-container colorfull_background">
 
-        <div class="slider_container colorfull_background">
+            <div class="slide_block fade first_slider_elem">
+                <img src="images/main_background_colorfull.png" style="width:100%">
+            </div>
+
+            <div class="slide_block fade">
+                <img src="images/main_background_colorfull1.png" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <div class="slide_text_container">
                 комплексные<br />
                 поставки<br />
                 <span class="red_text">стройматериалов</span>
             </div>
         </div>
-
         <div class="informative_section_container">
             <article class="informative_section info_section1">
                 <div class="textbox_container">
@@ -232,7 +250,7 @@
         <div class="our_partners_container">
             <div class="our_partners_design_block">
                 <div class="handshake"></div>
-                <div class="our_partners_text">ПОЧЕМУ ИМЕННО МЫ</div>
+                <div class="our_partners_text">Наши партнеры</div>
                 <div class="borders_container">
                     <span class="border_lines left_border"></span>
                     <span class="border_lines right_border"></span>

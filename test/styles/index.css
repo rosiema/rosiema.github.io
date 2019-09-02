@@ -22,6 +22,33 @@ header {
     background-color: rgb(0, 0, 0, .6);
     z-index: 2;
 }
+/*burger menu*/
+
+.topnav {
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    display: block;
+}
+.icon {
+    display: none;
+}
+#burger {
+    color: #fff;
+    position: absolute;
+    left: 2%;
+    font-size: 40px;
+}
+.navbar_space {
+    width: 100px;
+    height: 1px;
+}
+.menu_logo {
+    position: absolute;
+    left: 45.6%;
+}
+/*burger menu*/
 nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -41,6 +68,9 @@ nav a:not(.without_dot_item)::after {
     font-size: 12px;
     padding-left: 22px;
 }
+.space_menu_item {
+    padding: 60px;
+}
 .search_button_container {
     width: 13vw;
     height: auto;
@@ -52,7 +82,7 @@ nav a:not(.without_dot_item)::after {
 }
 .search_button_container input {
     width: 100%;
-    height: 50px;
+    height: 3vw;
     padding: 0 0 0 20px;
     background: transparent;
     -webkit-box-sizing: border-box;
@@ -88,7 +118,7 @@ nav a:not(.without_dot_item)::after {
 }
 .phone_button_container input {
     width: 100%;
-    height: 50px;
+    height: 3vw;
     padding: 0 30px 0 0;
     background: transparent;
     -webkit-box-sizing: border-box;
@@ -114,32 +144,122 @@ nav a:not(.without_dot_item)::after {
     color: #fff;
 }
 
-
-
 /*slider section start*/
 .colorfull_background {
-    background-image: url("../images/main_background_colorfull.png");
-    background-size: cover;
     width: 100%;
-    height: 935px;
+    height: 970px;
 }
 .slide_text_container {
-    font-size: .5vw;
+    font-size: 5vw;
     color: rgb(255, 255, 255);
     line-height: 1.2;
     text-align: left;
-    -moz-transform: matrix( 9, 0, 0, 9, 0, 0);
-    -webkit-transform: matrix( 9, 0, 0, 9, 0, 0);
-    -ms-transform: matrix( 9, 0, 0, 9, 0, 0);
     position: absolute;
-    left: 715px;
-    top: 476px;
+    left: 500px;
+    top: 300px;
     z-index: 1;
 }
 .red_text {
     color: rgb(231, 24, 24);
 }
+
+
+
+.slide_block {
+    display: none
+}
+
+/* Slideshow container */
+
+/* Next & previous buttons */
+.first_slider_elem {
+    display: block;
+}
+.slide_block img {
+    width: 100%;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    color: rgb(231, 24, 24);
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
 /*slider section end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*informative section with photos and baners start*/
 .informative_section_container {
@@ -203,7 +323,7 @@ nav a:not(.without_dot_item)::after {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-/*    bottom: 109px;*/
+    /*    bottom: 109px;*/
     bottom: 23.5%;
 }
 #prev {
@@ -281,11 +401,8 @@ nav a:not(.without_dot_item)::after {
 }
 .why_choose_us_text {
     z-index: 1;
-    font-size: 7px;
+    font-size: 2vw;
     text-transform: uppercase;
-    -moz-transform: matrix( 5.49760629021466,0,0,5.49760629021469,0,0);
-    -webkit-transform: matrix( 5.49760629021466,0,0,5.49760629021469,0,0);
-    -ms-transform: matrix( 5.49760629021466,0,0,5.49760629021469,0,0);
 }
 .borders_container {
     width: 100%;
@@ -430,6 +547,9 @@ nav a:not(.without_dot_item)::after {
 .service_info_text {
     font-size: 1.2vw;
 }
+.service_info_text li {
+    list-style-type: none;
+}
 /*services section with photos and banners end*/
 
 
@@ -564,11 +684,8 @@ nav a:not(.without_dot_item)::after {
 }
 .our_partners_text {
     z-index: 1;
-    font-size: 7px;
+    font-size: 2vw;
     text-transform: uppercase;
-    -moz-transform: matrix( 5.49760629021466,0,0,5.49760629021469,0,0);
-    -webkit-transform: matrix( 5.49760629021466,0,0,5.49760629021469,0,0);
-    -ms-transform: matrix( 5.49760629021466,0,0,5.49760629021469,0,0);
 }
 .borders_container {
     width: 100%;
@@ -837,426 +954,470 @@ footer {
 /*media queries for responsive */
 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+
+@media screen and (max-width: 1400px) {
+    .colorfull_background {
+        height: 700px;
+    }
     .slide_text_container {
-        left: 400px;
+        left: 370px;
+        top: 230px;
     }
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1200px)  {
+@media screen and (max-width: 1100px) {
+    .colorfull_background {
+        height: 500px;
+    }
+    .slide_text_container {
+        left: 280px;
+        top: 195px;
+    }
+    .informative_section_container {
+        height: 600px;
+    }
+    .info_section1 .textbox_container div {
+        width: 28vw;
+    }
     .textbox_container h2 {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
     .service_info_text {
         font-size: 1.5vw;
     }
-    .service_more_button, .informative_section_button {
-        width: 12vw;
-        height: 3vw;
-        font-size: 1.2vw;
+    .why_us_container {
+        height: 600px;
+    }
+    .why_choose_us_text {
+        font-size: 3vw;
     }
     .benefit_texts {
-        font-size: 1.3vw;
+        font-size: 1.1vw;
+    }
+    .services_container {
+        height: 700px;
+    }
+    .service_items p {
+        font-size: 1.6vw;
+    }
+    .about_us_info_container {
+        width: 60vw;
     }
     .about_us_info_container h2 {
         font-size: 3vw;
     }
     .about_us_info_container p {
-        font-size: 1.5vw;
-    }
-    .text_info_block .text_container {
         font-size: 1.4vw;
     }
+    .completed_projects_container {
+        height: 700px;
+    }
+    .project_test {
+        font-size: 2vw;
+    }
+    .text_info_block .text_container {
+        font-size: 1.5vw;
+        width: 38vw;
+        padding-left: 6vw;
+    }
+    .our_partners_container {
+        height: 500px;
+    }
+    .news_section_container {
+        height: 550px;
+    }
+    footer {
+        height: 400px;
+    }
+    .service_more_button, .informative_section_button {
+        font-size: 1.2vw;
+        width: 10vw;
+        height: 3vw;
+    }
     .news_box_container {
-        width: 90%;
-        height: 35vw;
+        width: 96%;
     }
     .news_box h2 {
-        font-size: 2vw;
+        font-size: 1.5vw;
+    }
+    .news_box p {
+        font-size: 1.2vw;
+        height: 89%;
     }
     .news_box date {
         font-size: 1vw;
     }
-    .news_box p {
-        font-size: 1.2vw;
+}
+
+@media screen and (max-width: 800px) {
+    .icon {
+        display: block;
     }
-    .contact_info div {
-        font-size: 1.2vw;
+    .navbar_space {
+        height: 0px;
     }
-    .menu_part1 a {
-        font-size: 1.2vw;
+    nav a {
+        background-color: rgba(0, 0, 0, 0.76);
+        width: 100%;
+        font-size: 3vw;
+        color: #fff;
+        text-decoration: none;
+        padding: 1% 0 1% 5%;
+    }
+    .space_menu_item {
+        padding: 0px;
+    }
+    nav a:not(.without_dot_item)::after {
+        content: none !important;
+    }
+    #myTopnav {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        width: 100%;
+    }
+    .topnav a:not(.menu_logo) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+
+    .phone_button_container {
+        position: absolute;
+    }
+    .search_button_container {
+        position: absolute;
+        right: 2%;
+    }
+    #myTopnav {
+        position: absolute;
+        left: 2%;
     }
     .slide_text_container {
-        left: 370px;
-    }
-} 
-
-/*from here menu is burger*/
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    .slide_text_container {
-        left: 350px;
-        top: 400px;
-    }
-    .colorfull_background {
-        height: 750px;
-    }
-    .informative_section_container {
-        display: grid;
-        height: 700px;
+        left: 150px;
+        top: 220px;
     }
     .info_section1 .textbox_container div {
-        width: 32vw;
+        width: 40vw;
     }
     .textbox_container h2 {
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
     .service_info_text {
         font-size: 2vw;
     }
+    .info_section2 .textbox_container div, .info_section3 .textbox_container div  {
+        width: 40vw;
+    }
+    .why_us_text_block {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .info_box {
+        height: 16vw;
+        margin: 0 1vw 5vw 1vw;
+        width: 30vw;
+    }
     .benefit_texts {
+        font-size: 2vw;
+    }
+    .service_items:nth-child(1) {
+        grid-column: 1 /span 2;
+        grid-row: 1;
+    }
+    .service_items:nth-child(2) {
+        grid-column: 1 /span 2;
+        grid-row: 2;
+    }
+    .service_items:nth-child(3) {
+        grid-column: 3 / span 4;
+        grid-row: 1/ span 2;
+    }
+    .service_items:nth-child(4) {
+        grid-column: 1/ span 2;
+        grid-row: 3;
+    }
+    .service_items:nth-child(5) {
+        grid-column: 3 / span 2;
+        grid-row: 3;
+    }
+    .service_items:nth-child(6) {
+        grid-column: 5/ span 2;
+        grid-row: 3;
+    }
+    .service_items div {
+        bottom: 60px;
+        width: 25vw;
+        height: 9vw;
+    }
+    .service_items p {
+        font-size: 2vw;
+    }
+    .service_more_button, .informative_section_button {
         font-size: 1.5vw;
+        width: 12vw;
+        height: 4vw;
+    }
+    .about_us_info_container {
+        width: 70vw;
+    }
+    .about_us_info_container {
+        margin-left: 7vw;
+    }
+    .about_us_info_container p {
+        font-size: 2vw;
+    }
+    .about_us_info_container h2 {
+        font-size: 5vw;
+    }
+    .project_test {
+        font-size: 3vw;
+    }
+    .text_info_block {
+        grid-column: 1 / span 4;
+        grid-row: 2;
+    }
+    .text_info_block .text_container {
+        font-size: 2.2vw;
+        width: 90%;
+    }
+    .third_project_block {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+    .fourth_project_block {
+        grid-column: 3 / span 2;
+        grid-row: 3;
+    }
+    .our_partners_text {
+        font-size: 5vw;
+    }
+    .partners_logo_img {
+        height: 7vw;
+    }
+    .news_box_container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: unset;
+    }
+    .news_section_container {
+        height: auto;
+        margin-bottom: 2%;
+    }
+    .news_box {
+        height: 100%;
+        margin: 0 .5vw 3vw .5vw;
+        width: 45%;
+    }
+    .news_box_img img {
+        height: 25vw;
+    }
+    .news_box h2 {
+        font-size: 2.3vw;
+    }
+    .news_box date {
+        font-size: 1.3vw;
+    }
+    .news_box p {
+        font-size: 2vw;
+    }
+    .footer_left_part {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .footer_logo, .contact_info, .menu_part1, .menu_part2 {
+        height: 50%;
+        width: 43%;
+        padding: 4vw .5vw 0 .5vw;
+    }
+    .contact_info div {
+        font-size: 1.5vw;
+    }
+    .menu_part1 a {
+        font-size: 1.5vw;
+    }
+    .menu_part2 a {
+        font-size: 1.5vw;
+    }
+    .footer_right_part_block {
+        width: 107%;
+        display: grid;
+    }
+    .back_call_text {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav a {
+        font-size: 5vw;
+    }
+    .info_section1 .textbox_container div {
+        width: 45vw;
+    }
+    .info_section2 .textbox_container div, .info_section3 .textbox_container div  {
+        width: 45vw;
+    }
+    .textbox_container h2 {
+        font-size: 4vw;
+    }
+    .service_info_text {
+        font-size: 2.5vw;
+    }
+    .service_more_button, .informative_section_button {
+        font-size: 2vw;
+        width: 15vw;
+        height: 6vw;
+    }
+    .why_choose_us_text {
+        font-size: 6vw;
+    }
+    .why_us_container {
+        height: 700px;
+    }
+    .info_box {
+        height: 18vw;
+        margin: 0 1vw 7vw 1vw;
+        width: 42vw;
+    }
+    .service_items div {
+        bottom: 60px;
+        width: 28vw;
+        left: 15px;
+        height: 14vw;
+    }
+    .about_us_info_container {
+        width: 90vw;
+    }
+    .about_us_info_container p {
+        font-size: 3vw;
+    }
+    .about_us_info_container h2 {
+        font-size: 6vw;
+    }
+    .text_info_block .text_container {
+        font-size: 3vw;
+        width: 93%;
+    }
+}
+@media screen and (max-width: 400px) {
+    nav a {
+        font-size: 6vw;
+    }
+    .slide_text_container {
+        left: 35px;
+        top: 220px;
+        font-size: 11vw;
+    }
+    .service_info_text {
+        font-size: 4vw;
+    }
+    .service_more_button, .informative_section_button {
+        font-size: 3vw;
+        width: 20vw;
+        height: 8vw;
     }
     .info_box {
         height: 30vw;
+        margin: 0 1vw 8vw 1vw;
+        width: 45vw;
     }
-    .why_us_container {
-        height: 700px;
-    }
-    .services_container {
-        height: 600px;
-    }
-    .service_items div {
-        bottom: 45px;
-        height: 12vw;
-    }
-    .service_items p {
-        font-size: 2.2vw;
-    }
-    .service_more_button, .informative_section_button {
-        width: 12vw;
-        height: 3vw;
-        font-size: 1.2vw;
-    }
-    .about_company {
-        height: 400px;
-    }
-    .about_us_info_container {
-        width: 80vw;
-    }
-    .about_us_info_container h2 {
+    .benefit_texts {
         font-size: 3vw;
     }
-    .about_us_info_container p {
-        font-size: 2vw;
+    .service_items div {
+        bottom: 35px;
+        width: 29vw;
+        left: 7px;
+        height: 30vw;
     }
-    .completed_projects_container {
-        height: 600px;
+    .about_us_info_container p {
+        font-size: 4vw;
     }
     .text_info_block .text_container {
-        font-size: 1.5vw;
+        font-size: 4vw;
+        width: 93%;
+        padding-left: 3vw;
     }
-    .our_partners_container {
-        height: 400px;
+    .partners_logo_img {
+        height: 8vw;
     }
-    .news_section_container {
-        height: 500px;
+    .news_box {
+        width: 80%;
     }
-    .news_box_container {
-        width: 90%;
+    .news_box_img img {
         height: 40vw;
     }
     .news_box h2 {
-        font-size: 2vw;
+        font-size: 4vw;
     }
     .news_box date {
-        font-size: 1.2vw;
+        font-size: 2.3vw;
     }
     .news_box p {
-        font-size: 1.4vw;
-    }
-    footer {
-        height: 400px;
-    }
-    .footer_left_part {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .contact_info div {
-        font-size: 1.2vw;
-    }
-    .menu_part1 a {
-        font-size: 1.2vw;
-    }
-    .menu_part2 a {
-        font-size: 1.2vw;
-    }
-}
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px)  {
-    .slide_text_container {
-        left: 300px;
-    }
-    .colorfull_background {
-        height: 750px;
-    }
-    .informative_section_container {
-        display: grid;
-        height: 700px;
-    }
-    .info_section1 .textbox_container div {
-        width: 32vw;
-    }
-    .textbox_container h2 {
-        font-size: 3.5vw;
-    }
-    .service_info_text {
-        font-size: 2vw;
-    }
-    .benefit_texts {
-        font-size: 2vw;
-    }
-    .why_us_container {
-        height: 600px;
-    }
-    .info_box {
-        height: 32vw;
-    }
-    .services_container {
-        height: 500px;
-    }
-    .service_items div {
-        bottom: 60px;
-        height: 21vw;
-        left: 30px;
-    }
-    .service_items p {
-        font-size: 2.6vw;
-    }
-    .service_more_button, .informative_section_button {
-        width: 14vw;
-        height: 4vw;
-        font-size: 1.7vw;
-    }
-    .about_company {
-        height: 400px;
-    }
-    .about_us_info_container {
-        width: 80vw;
-    }
-    .about_us_info_container h2 {
         font-size: 3vw;
     }
-    .about_us_info_container p {
-        font-size: 2vw;
-    }
-    .completed_projects_container {
-        height: 600px;
-    }
-    .text_info_block .text_container {
-        font-size: 1.5vw;
-    }
-    .our_partners_container {
-        height: 300px;
-    }
-    .news_section_container {
-        height: 500px;
-    }
-    .news_section_container {
-        height: 1070px;
-        display: grid;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-    }
-    .news_box_container {
-        width: 100%;
-        height: auto;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-    .news_box_img img {
-        height: 25vw;
-    }
-    .last_button {
-        margin: auto;
-    }
-    .news_box {
-        height: 100%;
-        margin: 0 .5vw;
-        width: 45%;
-    }
-    .news_box h2 {
-        font-size: 2.5vw;
-    }
-    .news_box date {
-        font-size: 1.7vw;
-    }
-    .news_box p {
-        font-size: 2vw;
-        height: 80%;
-    }
-    footer {
-        height: 400px;
-    }
-    .footer_left_part {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .contact_info div {
-        font-size: 1.2vw;
-    }
     .menu_part1 a {
-        font-size: 1.2vw;
-    }
-    .menu_part2 a {
-        font-size: 1.2vw;
-    }
-}
-
-
-@media only screen and (max-width: 600px) {
-    .slide_text_container {
-        left: 200px;
-    }
-    .colorfull_background {
-        height: 750px;
-    }
-    .informative_section_container {
-        display: grid;
-        height: 700px;
-    }
-    .info_section1 .textbox_container div {
-        width: 32vw;
-    }
-    .textbox_container h2 {
-        font-size: 3.5vw;
-    }
-    .service_info_text {
-        font-size: 2vw;
-    }
-    .benefit_texts {
-        font-size: 2vw;
-    }
-    .why_us_container {
-        height: 600px;
-    }
-    .info_box {
-        height: 32vw;
-    }
-    .services_container {
-        height: 500px;
-    }
-    .service_items div {
-        bottom: 60px;
-        height: 21vw;
-        left: 30px;
-    }
-    .service_items p {
-        font-size: 2.6vw;
-    }
-    .service_more_button, .informative_section_button {
-        width: 14vw;
-        height: 4vw;
-        font-size: 1.7vw;
-    }
-    .about_company {
-        height: 400px;
-    }
-    .about_us_info_container {
-        width: 80vw;
-    }
-    .about_us_info_container h2 {
         font-size: 3vw;
     }
-    .about_us_info_container p {
-        font-size: 2vw;
-    }
-    .completed_projects_container {
-        height: 600px;
-    }
-    .text_info_block .text_container {
-        font-size: 1.5vw;
-    }
-    .our_partners_container {
-        height: 300px;
-    }
-    .news_section_container {
-        height: 500px;
-    }
-    .news_section_container {
-        height: 1070px;
-        display: grid;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-    }
-    .news_box_container {
-        width: 100%;
-        height: auto;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-    .news_box_img img {
-        height: 25vw;
-    }
-    .last_button {
-        margin: auto;
-    }
-    .news_box {
-        height: 100%;
-        margin: 0 .5vw;
-        width: 45%;
-    }
-    .news_box h2 {
-        font-size: 2.5vw;
-    }
-    .news_box date {
-        font-size: 1.7vw;
-    }
-    .news_box p {
-        font-size: 2vw;
-        height: 80%;
-    }
-    footer {
-        height: 400px;
-    }
-    .footer_left_part {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .menu_part2 a {
+        font-size: 3vw;
     }
     .contact_info div {
-        font-size: 1.2vw;
+        font-size: 3vw;
     }
-    .menu_part1 a {
-        font-size: 1.2vw;
+    .back_call_text {
+        font-size: 3vw;
     }
-    .menu_part2 a {
-        font-size: 1.2vw;
+    .back_call_name {
+        height: 8vw;
     }
-
+    .back_call_number {
+        height: 8vw;
+    }
+    .footer_logo img {
+        height: 48%;
+    }
+}
+@media screen and (max-width: 2700px) {
+    .menu_logo {
+        position: absolute;
+        left: calc(50% - 100px);
+    }
+}
+@media screen and (max-width: 1925px) {
+    .menu_logo {
+        position: absolute;
+        left: calc(50% - 85px);
+    }
+}
+@media screen and (max-width: 1450px) {
+    .menu_logo {
+        position: absolute;
+        left: calc(50% - 75px);
+    }
+}
+@media screen and (max-width: 1025px) {
+    .menu_logo {
+        position: absolute;
+        left: calc(50% - 70px);
+    }
 }
 
-
-
+/* end about styles */
 
 
 
