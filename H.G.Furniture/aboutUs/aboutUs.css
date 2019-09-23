@@ -189,6 +189,7 @@ div#navbar.navbar::before {
     font-size: 1.15vw;
     padding: 15px 80px 0 80px;
     font-family: neuton;
+    color: #dedcde;
     color: #dedcdecc;
     text-align: justify;
 }
@@ -224,6 +225,7 @@ div#navbar.navbar::before {
     font-size: 1.175vw;
     padding: 50px 50px 0 50px;
     font-family: neuton;
+    color: #dedcde;
     color: #dedcdecc;
     text-align: justify;
 }
